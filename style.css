@@ -186,7 +186,7 @@ body {
 .hero {
     position: relative;
     height: 400px; /* Ajuste la hauteur selon tes préférences */
-    background: url('Images/Beige Aesthetic Fashion Clothing Collection Medium Banner.zip - 3.jpg') no-repeat center center;
+    background: url('images/Beige Aesthetic Fashion Clothing Collection Medium Banner.zip - 3.jpg') no-repeat center center;
     background-size: cover; /* L'image en cover pour occuper toute la section */
     display: flex;
     justify-content: flex-end; /* Le contenu (texte + bouton) est aligné à droite */
