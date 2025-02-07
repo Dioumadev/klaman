@@ -186,7 +186,7 @@ body {
 .hero {
     position: relative;
     height: 400px; /* Ajuste la hauteur selon tes préférences */
-    background: url('./images/cover.jpg') no-repeat center center/hero;
+    background: url('images/cover.jpg') no-repeat center center/hero;
     background-size: cover; /* L'image en cover pour occuper toute la section */
     display: flex;
     justify-content: flex-end; /* Le contenu (texte + bouton) est aligné à droite */
