@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klaman care</title>
+    <!-- Ajouter le lien Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Symbole hamburger -->
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <!-- Éléments visibles uniquement sur mobile -->
+            <div class="mobile-only">
+                <a href="compte.html" class="cta-button">Mon compte</a>
+                <li><a href="commandes.html">Mes commandes</a></li>
+                <li ><a href="promotions.html">Promotions</a></li>
+                <li ><a href="aide-support.html">Aide & Support</a></li>
+
+                <!-- Icônes sociales -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+        </ul>
+        <div class="logo">
+            <img src="Images/Photoroom_20241227_112450 - Copie (3).png" alt="Logo de klaman">
+        </div>
+            <!-- Ajouter les icônes -->
+        <div class="nav-link" id="navLink">
+            <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>            
+            <a href="panier.html"><i class="fas fa-shopping-cart"></i>
+            <span class="cart-notif" id="cart-count">0</span>
+            </a>
+            <a href="auth.html"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+    </header>
+    
+    <!-- Section image, texte et bouton -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Par ce que vous</h1>
+            <h1>méritez le meilleur</h1>
+            <p>Découvrez nos produits de</p>
+            <p>qualité à prix savoureux.</p>
+            <a href="boutique.html" class="cta-button">Commencez à acheter</a>
+        </div>
+    </section>
+    <!-- Barre d'annonce -->
+    <div class="announcement-bar">
+        <marquee behavior="scroll" direction="left">🚀 Livraison gratuite dès 50€ d'achat ! Profitez-en maintenant !
+        </marquee>
+    </div>
+    <!-- Section des catégories -->
+    <section class="categories">
+        <div class="category-container">
+            <a href="cheveux.html" class="category-card">
+                <img src="Images/IMG_9020.png" alt="Cheveux">
+                <p>Cheveux</p>
+            </a>
+            <a href="corps.html" class="category-card">
+                <img src="Images/IMG_9021.png" alt="Corps">
+                <p>Corps</p>
+            </a>
+            <a href="klaman.html" class="category-card">
+                <img src="Images/IMG_9024.png" alt="Klaman">
+                <p>Klaman</p>
+            </a>
+            <a href="beaute.html" class="category-card">
+                <img src="Images/IMG_9022.png" alt="Beauté">
+                <p>Beauté</p>
+            </a>
+            <a href="accessoires.html" class="category-card">
+                <img src="Images/IMG_9023.png" alt="Accessoires">
+                <p>Accessoires</p>
+            </a>
+        </div>
+    </section>
+    <section class="nouveaux-produits">
+        <h2>Nos Nouveaux Produits</h2>
+            <div class="produits-container">
+            <div class="produit-card">
+                <span class="new-banner">Nouveau</span> <!-- Bannière -->
+                <img src="Images/Design sans titre.zip - 11.png" alt="Produit 1">
+                <div class="produit-info">
+                    <h3>Produit 1</h3>
+                    <p>Un super produit avec une qualité incroyable.</p>
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                </div>
+            </div>
+
+            <div class="produit-card">
+                <span class="new-banner">Nouveau</span> <!-- Bannière -->
+                <img src="Images/Design sans titre.zip - 15.png" alt="Produit 2">
+                <div class="produit-info">
+                    <h3>Produit 2</h3>
+                    <p>Ce produit est parfait pour vos besoins.</p>
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                </div>
+            </div>
+
+            <div class="produit-card">
+                <span class="new-banner">Nouveau</span> <!-- Bannière -->
+                <img src="Images/IMG_8932.JPG" alt="Produit 3">
+                <div class="produit-info">
+                    <h3>Produit 3</h3>
+                    <p>Découvrez notre nouveauté exceptionnelle.</p>
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section image, texte et bouton -->
+    <section class="a-propos">
+    <div class="a-propos-image">
+        <img src="Images/klaman.zip - 34.jpeg" alt="Image d'à propos"> <!-- Remplace par ton image -->
+    </div>
+    <div class="a-propos-text">
+        <h1>Sublimez vos cheveux naturellement.</h1>
+        <p>Découvrez nos produits capillaires spécialement formulés pour répondre aux besoins de tous types de cheveux.</p>
+        <p><strong>Ingrédients naturels: </strong>Parce que vos cheveux méritent le meilleur.</p>
+        <p><strong>Des résultats visibles: </strong>Hydratation, brillance et vitalité dès les premières utilisations.
+
+</p>
+        <p><strong>Engagement durable: </strong>Des produits respectueux de l'environnement et de votre bien être.
+
+</p>
+        <a href="boutique.html" class="cta-button">Commencez à acheter</a>
+    </div>
+    </section>
+    <section class="product">
+        <h2>Nos Produits</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="Images/Design sans titre.zip - 11.png" alt="Produit 1">
+                <h3>Produit 1</h3>
+                <p>Description courte du produit.</p>
+                <span class="prix">19.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Images/Design sans titre.zip - 15.png" alt="Produit 2">
+                <h3>Produit 2</h3>
+                <p>Un autre super produit.</p>
+                <span class="prix">29.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Images/IMG_8932.JPG" alt="Produit 3">
+                <h3>Produit 3</h3>
+                <p>Ce produit est un best-seller.</p>
+                <span class="prix">39.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Images/Design sans titre.zip - 14.png" alt="Produit 4">
+                <h3>Produit 4</h3>
+                <p>Un excellent choix pour tout le monde.</p>
+                <span class="prix">49.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Images/IMG_8932.JPG" alt="Produit 3">
+                <h3>Produit 3</h3>
+                <p>Ce produit est un best-seller.</p>
+                <span class="prix">39.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Images/Design sans titre.zip - 14.png" alt="Produit 4">
+                <h3>Produit 4</h3>
+                <p>Un excellent choix pour tout le monde.</p>
+                <span class="prix">49.99€</span>
+                <div class="actions">
+                    <a href="#" class="btn-produit">Voir le produit</a>
+                    <i class="fas fa-heart favoris" onclick="toggleFavoris(this)"></i>
+                </div>
+            </div>
+        </div>
+        <a href="boutique.html" class="cta-button">Voir tous les produits</a>
+    </section>
+    <section class="pourquoi-nous">
+        <div class="pourquoi-nous-text">
+            <h1>Pourquoi nous choisir ?</h1>
+            <p>Formulations adaptées à chaque texture de cheveux et type de peau</p>
+            <p>Sans produits chimiques agressifs</p>
+            <p>Inspiré des rituels de beauté traditionnels et modernes.</p>
+        </div>
+    </section>
+    <section class="blog">
+        <h2>Nos Derniers Articles</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <img src="Images/IMG_8939.JPG" alt="Article 1">
+                <h3>Article 1</h3>
+                <p>Un aperçu rapide du sujet de l'article.</p>
+                <div class="actions">
+                    <a href="article1.html" class="btn-article">Voir l'article</a>
+                    <i class="fas fa-comments commentaires" onclick="afficherCommentaires('article1')"></i>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="Images/IMG_8941.WEBP" alt="Article 2">
+                <h3>Article 2</h3>
+                <p>Un autre sujet intéressant abordé ici.</p>
+                <div class="actions">
+                    <a href="article2.html" class="btn-article">Voir l'article</a>
+                    <i class="fas fa-comments commentaires" onclick="afficherCommentaires('article2')"></i>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="Images/IMG_8942.JPG" alt="Article 3">
+                <h3>Article 3</h3>
+                <p>Découvrez des informations utiles sur ce sujet.</p>
+                <div class="actions">
+                    <a href="article3.html" class="btn-article">Voir l'article</a>
+                    <i class="fas fa-comments commentaires" onclick="afficherCommentaires('article3')"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+            <h2>Rejoignez la Klamhouse !</h2>
+            <p>Inscrivez-vous à notre newsletter pour ne rien manquer.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Votre adresse email">
+                <button>S'inscrire</button>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="compte.html">Mon compte</a></li>
+                    <li><a href="commandes.html">Mes commandes</a></li>
+                    <li ><a href="promotions.html">Promotions</a></li>
+                    <li ><a href="aide-support.html">Aide & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Nos Boutiques</h3>
+                <ul>
+                    <li>Paris - 12 rue Exemple</li>
+                    <li>Lyon - 45 avenue Boutique</li>
+                    <li>Marseille - 78 boulevard Mode</li>
+                    <li>Pop-up store - Événements spéciaux</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <img src="Images/Photoroom_20241227_112450 - Copie (2).png" alt="Logo Boutique" class="footer-logo">
+                <h3>klaman care</h3>
+                <p>Parce que vous mérité le meilleur.</p>
+                <!-- Icônes sociales --> 
+            </div>
+        </div>
+        <div class="social-icon">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 klaman care - Tous droits réservés | <a href="politique.html">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

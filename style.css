@@ -1,0 +1,941 @@
+/* style.css */
+
+/* Style de base */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed; /* Permet de positionner la barre de recherche correctement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Logo */
+.logo img {
+    width: 100%;
+    max-width: 150px; /* Taille de l'image */
+    height: auto;
+    position: center; /* Permet de le centrer par rapport à son parent */
+    transform: translateX(-110%); /* Décale le logo de la moitié de sa largeur */
+    left: 0;
+}
+
+/* Liste des liens */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    margin-right: 25px;
+}
+
+/* Effet de soulignement animé sous les liens du menu */
+.nav-links li a {
+    position: relative; /* Nécessaire pour que ::after fonctionne */
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+
+/* Barre fine sous chaque lien (cachée par défaut) */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* Distance sous le texte */
+    width: 0%; /* Cachée par défaut */
+    height: 2px; /* Épaisseur de la barre */
+    background-color: #000; /* Couleur de la barre */
+    transition: width 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Afficher la barre au survol */
+.nav-links li a:hover::after {
+    width: 100%; /* La barre prend toute la largeur du lien */
+}
+
+/* Hamburger (visible uniquement sur petit écran) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Liste des liens */
+.nav-link {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+/* Effet de soulignement animé sous les liens du menu */
+.nav-link a {
+    position: relative; /* Nécessaire pour que ::after fonctionne */
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+}
+
+/* Pastille de notification */
+.cart-notif {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    visibility: visible; /* Toujours visible, même si 0 */
+}
+
+/* Cacher les éléments supplémentaires sur grand écran */
+.mobile-only {
+    display: none;
+}
+
+/* Style pour les petits écrans */
+@media screen and (max-width: 768px) {
+    /* Logo */
+    .logo img {
+        width: 100%;
+        max-width: 100px; /* Taille de l'image */
+        height: auto;
+        position: center; /* Permet de le centrer par rapport à son parent */
+        transform: translateX(20%); /* Décale le logo de la moitié de sa largeur */
+    }
+    
+    .nav-links {
+        display: none; /* Cache le menu */
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: #fff;
+        width: 170px;
+        height: 10000%;
+        text-align: left;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 2000; /* S'assure qu'il est au-dessus de tout */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex; /* Affiche le menu quand on clique */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Affiche l'icône hamburger */
+    }
+    
+    .mobile-only {
+        display: block;
+        margin-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 280px;
+    }
+
+    .mobile-only li {
+        padding: 10px 0;
+    }
+
+    /* Icônes sociales */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .social-icons a {
+        color: #623812;
+        font-size: 18px;
+    }
+}
+
+/* Style général de la section hero */
+.hero {
+    position: relative;
+    height: 400px; /* Ajuste la hauteur selon tes préférences */
+    background: url('Images/Beige Aesthetic Fashion Clothing Collection Medium Banner.zip - 3.jpg') no-repeat center center;
+    background-size: cover; /* L'image en cover pour occuper toute la section */
+    display: flex;
+    justify-content: flex-end; /* Le contenu (texte + bouton) est aligné à droite */
+    align-items: center; /* Centrer verticalement le texte et le bouton */
+    padding-right: 40px; /* Un petit espace à droite */
+    color: white; /* Texte en blanc */
+}
+
+/* Style du texte dans la section hero */
+.hero-text {
+    text-align: right; /* Aligner le texte à droite */
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    color: #623812;
+    margin-right: 100px;
+}
+
+.hero-text p {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+    margin-right: 100px;
+    margin-top: -15px;
+}
+
+/* Style du bouton */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 100px;
+}
+
+.cta-button:hover {
+    background-color: #623812;
+}
+
+/* Style mobile (moins de 768px) */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 300px; /* Moins de hauteur sur les petits écrans */
+        padding-right: 20px; /* Moins d'espace à droite */
+    }
+
+    .hero-text h1 {
+        font-size: 25px; /* Taille du titre plus petite */
+        margin-top: -20px;
+        margin-right: 0;
+    }
+
+    .hero-text p {
+        font-size: 16px; /* Taille du texte plus petite */
+        margin-bottom: 20px;
+        margin-top: -15px;
+        margin-right: 0;
+    }
+
+    .cta-button {
+        font-size: 16px; /* Taille du bouton plus petite */
+        margin-right: 0;
+    }
+}
+
+/* Barre d'annonce */
+.announcement-bar {
+    background-color: #623812; /* Couleur orange pour attirer l'attention */
+    color: white; /* Texte en blanc */
+    text-align: center;
+    padding: 2px;
+    font-size: 16px;
+    width: 99,5%;
+    position: relative;
+    z-index: 10;
+}
+/* Section des catégories */
+.categories {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #fff;
+}
+
+/* Conteneur des catégories */
+.category-container {
+    display: flex;
+    justify-content: center; /* Alignement à gauche */
+    gap: 30px;
+    overflow-x: auto; /* Défilement horizontal si nécessaire */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    margin-bottom: -10px; /* Espace sous les cartes */
+    scrollbar-width: none; /* Cache la barre de défilement sur Firefox */
+}
+
+/* Cartes des catégories */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+    flex: 0 0 auto; /* Empêche le redimensionnement automatique */
+    text-align: center;
+}
+
+/* Masquer la scrollbar sur Chrome, Edge et Safari */
+.category-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Image en rond */
+.category-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* Ajuste bien l'image */
+    border: 3px solid #ddd; /* Bordure légère */
+}
+
+/* Nom sous l’image */
+.category-card p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Effet au survol */
+.category-card:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+}
+/* Ajustement pour les écrans larges */
+@media (min-width: 768px) {
+    .category-container {
+        justify-content: center; /* Centre les éléments sur les grands écrans */
+    }
+    /* Image en rond */
+    .category-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* Rend l'image ronde */
+        object-fit: cover; /* Ajuste bien l'image */
+        border: 3px solid #ddd; /* Bordure légère */
+    }
+
+    /* Nom sous l’image */
+    .category-card p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Section Nouveaux Produits */
+.nouveaux-produits {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+}
+
+.nouveaux-produits h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Conteneur des produits */
+.produits-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: 15px 15px;
+}
+
+/* Style de la bannière "Nouveau" */
+.new-banner {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 40px;
+    transform: rotate(-30deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des cartes produits */
+.produit-card {
+    position: relative; /* Important pour placer la bannière */
+    overflow: hidden;
+    border: 1px solid #ddd;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produit-card img {
+    width: 50%;
+    height: 200px;       /* Hauteur fixe pour uniformiser */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produit-info {
+    flex: 1;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.produit-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.produit-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn-produit {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-produit:hover {
+    background-color: #623812;
+}
+
+/* 💡 Défilement sur mobile */
+@media screen and (max-width: 768px) {
+    .produits-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .produit-card {
+        flex: 0 0 90%;
+        scroll-snap-align: start;
+    }
+
+    .btn-produit {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: #000;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .btn-produit:hover {
+        background-color: #623812;
+    }
+}
+
+/* Style général de la section à propos */
+.a-propos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Style de l'image */
+.a-propos-image img {
+    width: 100%;
+    max-width: 400px; /* Taille de l'image */
+    height: auto;
+    border-radius: 8px;
+    margin-left: 50px;
+}
+
+/* Style du texte */
+.a-propos-text {
+    max-width: 2000px;
+    margin-left: 100px;
+    top: -30px;
+}
+
+.a-propos-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.a-propos-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Style mobile (moins de 768px) */
+@media screen and (max-width: 768px) {
+    .a-propos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .a-propos-image img {
+        max-width: 100%; /* L'image est plus petite sur mobile */
+        margin: 0 auto 20px;
+    }
+
+    .a-propos-text {
+        margin-left: 0;
+        margin-top: -35px;
+    }
+
+    .a-propos-text h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .a-propos-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+}
+
+/* Section Produits */
+.product {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.product h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Conteneur des produits */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 colonnes sur grand écran */
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style des cartes produits */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.prix {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff2990;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Bouton et icône */
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icône Favoris */
+.favoris {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.favoris.active {
+    color: red; /* Change en rouge quand ajouté aux favoris */
+}
+
+/* Responsive : 2 cartes sur petit écran */
+@media screen and (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur petit écran */
+    }
+}
+
+/* Style du texte */
+.pourquoi-nous-text {
+    max-width: 2000px;
+    top: -30px;
+    align-items: center;
+    text-align: center;
+}
+
+.pourquoi-nous-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pourquoi-nous-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Style mobile (moins de 768px) */
+@media screen and (max-width: 768px) {
+    .pourquoi-nous {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .pourquoi-nous-text {
+        margin-left: 0;
+        margin-top: -35px;
+    }
+
+    .pourquoi-nous-text h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .pourquoi-nous-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+}
+
+/* Section Blog */
+.blog {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #fff;
+}
+
+.blog h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Conteneur des articles */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur grand écran */
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Style des cartes articles */
+.blog-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;         /* Prend toute la largeur de la carte */
+    height: 200px;       /* Hauteur fixe pour uniformiser */
+    object-fit: cover;   /* Coupe et ajuste l’image pour remplir l’espace */
+    border-radius: 8px;
+}
+
+.blog-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Bouton et icône */
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-article {
+    padding: 8px 15px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-article:hover {
+    background-color: #623812;
+}
+
+/* Icône Commentaires */
+.commentaires {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.commentaires:hover {
+    color: #623812;
+}
+
+/* Responsive : 1 carte sur petit écran */
+@media screen and (max-width: 768px) {
+    .blog-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 10px;
+        grid-template-columns: 1fr; /* 1 colonne sur petit écran */
+    }
+
+    .blog-card {
+        flex: 0 0 90%;
+        scroll-snap-align: start;
+    }
+}
+
+/* ---------- Footer Global ---------- */
+footer {
+    background-color: #623812;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.newsletter-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter-input input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-input button {
+    padding: 10px 15px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-input button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ---------- Contenu du Footer (3 colonnes) ---------- */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+/* ---------- Logo dans le Footer ---------- */
+.footer-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Bas du Footer (Copyright) ---------- */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Icônes sociales */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.social-icon a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ---------- Responsive pour petit écran ---------- */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        overflow-x: auto; /* Active le scroll horizontal */
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+    }
+
+    .footer-column {
+        min-width: 250px; /* Taille minimale des colonnes */
+        margin-right: 20px;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-bottom: -20px;
+    }
+
+    /* Icônes sociales */
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .social-icon a {
+        color: #fff;
+        font-size: 18px;
+    }
+}
