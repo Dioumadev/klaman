@@ -186,13 +186,20 @@ body {
 .hero {
     position: relative;
     height: 400px; /* Ajuste la hauteur selon tes préférences */
-    background: #000;
+    background: #fff;
     background-size: cover; /* L'image en cover pour occuper toute la section */
     display: flex;
     justify-content: flex-end; /* Le contenu (texte + bouton) est aligné à droite */
     align-items: center; /* Centrer verticalement le texte et le bouton */
     padding-right: 40px; /* Un petit espace à droite */
     color: white; /* Texte en blanc */
+}
+
+/* Image en cover */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Style du texte dans la section hero */
