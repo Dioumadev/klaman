@@ -187,7 +187,6 @@ body {
     position: relative;
     height: 400px; /* Ajuste la hauteur selon tes préférences */
     background: #fff;
-    background-size: cover; /* L'image en cover pour occuper toute la section */
     display: flex;
     justify-content: flex-end; /* Le contenu (texte + bouton) est aligné à droite */
     align-items: center; /* Centrer verticalement le texte et le bouton */
