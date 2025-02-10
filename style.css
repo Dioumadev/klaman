@@ -940,3 +940,34 @@ footer {
         font-size: 18px;
     }
 }
+
+/* --------- recherche ---------- */
+#search-input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-btn {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Résultats de la recherche */
+.search-results {
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+}
+
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
