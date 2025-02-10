@@ -60,3 +60,53 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search-input");
+    const searchBtn = document.getElementById("search-btn");
+    const resultsContainer = document.getElementById("results-container");
+
+    // Liste des produits (simulée)
+    const produits = [
+        { nom: "T-shirt Rouge", image: "tshirt-rouge.jpg" },
+        { nom: "Chaussures Sport", image: "chaussures-sport.jpg" },
+        { nom: "Montre Luxe", image: "montre-luxe.jpg" },
+        { nom: "Sac à dos", image: "sac-a-dos.jpg" }
+    ];
+
+    // Fonction de recherche
+    function rechercherProduit() {
+        let query = searchInput.value.toLowerCase();
+        resultsContainer.innerHTML = ""; // Vider les résultats
+
+        let results = produits.filter(produit => produit.nom.toLowerCase().includes(query));
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = "<p>Aucun produit trouvé.</p>";
+            return;
+        }
+
+        results.forEach(produit => {
+            let card = document.createElement("div");
+            card.classList.add("product-card");
+
+            card.innerHTML = `
+                <img src="${produit.image}" alt="${produit.nom}">
+                <h3>${produit.nom}</h3>
+                <button class="view-product">Voir le produit</button>
+            `;
+
+            resultsContainer.appendChild(card);
+        });
+    }
+
+    // Déclencher la recherche en cliquant sur le bouton
+    searchBtn.addEventListener("click", rechercherProduit);
+
+    // Déclencher la recherche en appuyant sur "Entrée"
+    searchInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            rechercherProduit();
+        }
+    });
+});
