@@ -944,7 +944,7 @@ footer {
 /* --------- recherche ---------- */
 #search-input {
     width: 300px;
-    padding: 28px;
+    padding: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
