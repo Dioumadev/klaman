@@ -971,3 +971,12 @@ footer {
     gap: 15px;
     justify-content: center;
 }
+
+search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Le contenu (texte + bouton) est aligné à droite */
+    align-items: center; /* Centrer verticalement le texte et le bouton */
+    padding-right: 40px; /* Un petit espace à droite */
+    color: #000; /* Texte en noir */
+}
