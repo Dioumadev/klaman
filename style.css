@@ -977,6 +977,6 @@ search-bar {
     display: flex;
     justify-content: center; /* Le contenu (texte + bouton) est aligné à droite */
     align-items: center; /* Centrer verticalement le texte et le bouton */
-    padding-top: 40px; /* Un petit espace à droite */
+    padding-top: 240px; /* Un petit espace à droite */
     color: #000; /* Texte en noir */
 }
