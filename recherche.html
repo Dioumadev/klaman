@@ -11,11 +11,52 @@
 <body>
 
     <!-- Barre de navigation -->
-    <header class="navbar">
+    <header>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Symbole hamburger -->
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <!-- Éléments visibles uniquement sur mobile -->
+            <div class="mobile-only">
+                <a href="compte.html" class="cta-button">Mon compte</a>
+                <li><a href="commandes.html">Mes commandes</a></li>
+                <li ><a href="promotions.html">Promotions</a></li>
+                <li ><a href="aide-support.html">Aide & Support</a></li>
+
+                <!-- Icônes sociales -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+        </ul>
+        <div class="logo">
+            <img src="images/Photoroom_20241227_112450 - Copie (3).png" alt="Logo de klaman">
+        </div>
+            <!-- Ajouter les icônes -->
+        <div class="nav-link" id="navLink">
+            <a href="recherche.html" id="searchIcon"><i class="fas fa-search"></i></a>            
+            <a href="panier.html"><i class="fas fa-shopping-cart"></i>
+            <span class="cart-notif" id="cart-count">0</span>
+            </a>
+            <a href="auth.html"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+    </header>
+    
+    <section class="searchbar">
         <a href="index.html" class="logo">Mon E-commerce</a>
         <input type="text" id="search-input" placeholder="Rechercher un produit...">
         <button id="search-btn"><i class="fas fa-search"></i></button>
-    </header>
+    </section>
 
     <!-- Résultats de la recherche -->
     <section class="search-results">
